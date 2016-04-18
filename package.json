@@ -1,0 +1,16 @@
+{
+  "name": "weather_on_twitter",
+  "version": "1.0.0",
+  "description": "get weather info by typing city name and (today , tomorrow . day after tomorrow )",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sarea",
+  "license": "ISC",
+  "dependencies": {
+    "simple-get-json": "^1.1.0",
+    "twitter": "^1.2.5"
+  },
+  "devDependencies": {}
+}

@@ -1,7 +1,8 @@
 fs = require('fs');
 
-function cityAndDate(text ,arrCityAndDate) {
+function cityAndDate(text ,callbackCityAndDate) {
   var day = whichDay(text);
+  var city = "none";
   fs.readFile('./cities.txt', 'utf8', function (err,data) {
     if (err) {
       return console.log(err);
@@ -10,9 +11,11 @@ function cityAndDate(text ,arrCityAndDate) {
     for (var i=0; i<text.length; i++ ){
       if(data.indexOf("," + capitalize(text[i]) + "," ) !== -1){
         console.log(text[i]);
-        arrCityAndDate([text[i] ,day])
+        city = text[i];
+        break;
       }
     }
+    callbackCityAndDate([city ,day]);
   });
 }
 

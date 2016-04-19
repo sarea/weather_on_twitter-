@@ -16,7 +16,7 @@ function reply(tweet) {
   console.log(tweet.text);
   getCityAndDate.cityAndDate(tweet.text , function(cityAndDate){
     loadWeatherInfo.displayWeatherInfo(cityAndDate[0] , cityAndDate[1] , function(weather) {
-      console.log("city "+ cityAndDate[0] + "number of date "+ cityAndDate[1]);
+      console.log("city :"+ cityAndDate[0] + ", number of date :"+ cityAndDate[1]);
       var reply_text = {
         status: "@"+tweet.user.screen_name + " " + weather,
         in_reply_to_status_id: tweet.id_str
